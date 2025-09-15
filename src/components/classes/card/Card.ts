@@ -29,10 +29,4 @@ export class Card {
   constructor(data: CardData) {
     this.data = data;
   }
-
-  /**
-   * Loads the card into Card.data
-   * @param title The title to load the card with
-   */
-  Init(title: string) {}
 }

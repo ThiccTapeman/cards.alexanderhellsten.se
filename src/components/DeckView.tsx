@@ -14,8 +14,13 @@ export function DeckView() {
   return (
     <div>
       <div>Deck Component</div>
-      {game.deck &&
-        game.deck.cards.map((c) => <CardView card={c.base}></CardView>)}
+      <div className="grid grid-cols-3 gap-5">
+        {game.deck &&
+          game.deck.cards.map((c) => (
+            <CardView card={c.base} key={`${c.data?.title}_VIEW`}></CardView>
+          ))}
+      </div>
+
       {shouldUpdate && <div>Deck Updated (tick {tick})</div>}
     </div>
   );

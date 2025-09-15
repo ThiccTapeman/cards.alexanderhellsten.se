@@ -7,22 +7,32 @@ import React, {
 } from "react";
 
 type OverlayState = {
-  ui: string | null;
-  close: () => void;
+  ui: string[];
+  close: (name: string) => void;
   open: (ui: string) => void;
+};
+
+type OverlayAPI = {
+  open: ((ui: string) => void) | null;
+  close: ((name: string) => void) | null;
+};
+
+export const Overlay: OverlayAPI = {
+  open: null,
+  close: null,
 };
 
 const OverlayContext = createContext<OverlayState | null>(null);
 
 export function OverlayProvider({ children }: { children: ReactNode }) {
-  const [ui, setUi] = useState<string | null>(null);
+  const [ui, setUi] = useState<string[]>([]);
 
   function open(name: string) {
-    setUi(name);
+    setUi((prev) => (prev.includes(name) ? prev : [...prev, name]));
   }
 
-  function close() {
-    setUi(null);
+  function close(name: string) {
+    setUi((prev) => prev.filter((item) => item !== name));
   }
 
   useEffect(() => {
@@ -36,13 +46,17 @@ export function OverlayProvider({ children }: { children: ReactNode }) {
 
   return (
     <OverlayContext.Provider value={{ ui, open, close }}>
-      {children}
+      <div className="fixed top-0 left-0 w-screen h-screen">{children}</div>
     </OverlayContext.Provider>
   );
 }
 
-export function useOverlay(name: string) {
+export function useOverlay(name: string, showAlways: boolean = false) {
   const ctx = useContext(OverlayContext);
   if (!ctx) throw new Error("Must be inside OverlayProvider");
-  return ctx.ui === name;
+  return {
+    isActive: ctx.ui.includes(name) || showAlways,
+    open: (n: string) => ctx.open(n),
+    close: () => ctx.close(name),
+  };
 }

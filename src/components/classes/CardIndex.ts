@@ -9,6 +9,10 @@ const CardJSON = require("../config/Cards.json");
 export class CardIndex {
   static cards: Card[] = this.LoadCards();
 
+  /**
+   * Loads all the cards from /src/components/config/Cards.json
+   * @returns A list of cards that are loaded from the cards.json file
+   */
   private static LoadCards(): Card[] {
     const cards = CardJSON.cards
       .map((c: any) => {
@@ -17,9 +21,23 @@ export class CardIndex {
         return new Card(data);
       })
       .filter((c: Card | null): c is Card => c !== null);
-    console.log(cards);
+
+    if (cards.length == 0) {
+      throw new ErrorHandler(
+        "CardIndex",
+        "Couldn't load cards from the json.",
+        ErrorType.Null
+      );
+    }
+
     return cards;
   }
+
+  /**
+   * Private getter to get a CardData type from a base card json
+   * @param card Card json
+   * @returns A CardData type with the data from the json
+   */
   private static GetCardData(card: any): CardData | null {
     const cardRarity = RarityHandler.Get(card.rarity);
     const cardType = TypeHandler.Get(card.type);
@@ -43,6 +61,11 @@ export class CardIndex {
     return data;
   }
 
+  /**
+   * Tries to get a card with the title
+   * @param title The title of the card to try to get
+   * @returns The card with the title
+   */
   static Get(title: string) {
     const card = this.cards.find((c: Card) => c.data?.title == title);
     if (!card) {
@@ -55,6 +78,10 @@ export class CardIndex {
     return card;
   }
 
+  /**
+   * Gets a random card from the index, chances are based on the chances of the rarities.
+   * @returns One card
+   */
   static GetRandomCard() {
     const rarity = RarityHandler.GetRandom();
 
