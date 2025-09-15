@@ -1,3 +1,4 @@
+import { Book, Play } from "lucide-react";
 import { useOverlay } from "../OverlayProvider";
 
 export function ButtonCluster() {
@@ -9,7 +10,12 @@ export function ButtonCluster() {
   function onRollDice() {}
   return (
     <div className="flex">
-      <button onClick={onPickCard}>DECK VIEW</button>
+      <button onClick={onRollDice}>
+        <Play></Play>
+      </button>
+      <button onClick={onPickCard}>
+        <Book></Book>
+      </button>
     </div>
   );
 }

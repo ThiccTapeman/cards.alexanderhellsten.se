@@ -11,7 +11,7 @@ const DiceView = ({ onRollDone, onDieDone }: Props) => {
   const { roll } = useDice();
 
   const handleRoll = async () => {
-    const results = await roll("2d6");
+    const results = await roll("2pip");
     if (!Array.isArray(results) || results.length === 0) return;
 
     console.log("Dice results:", results);

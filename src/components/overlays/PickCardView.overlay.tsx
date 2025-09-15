@@ -9,7 +9,7 @@ export function PickCardOverlay() {
 
   if (!overlay.isActive) return null;
   return (
-    <div className="w-full h-full bg-black">
+    <div className="w-screen h-screen bg-black">
       <button onClick={onClose}>Close</button>
     </div>
   );

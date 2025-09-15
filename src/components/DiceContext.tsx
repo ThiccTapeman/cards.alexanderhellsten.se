@@ -35,7 +35,7 @@ export const DiceProvider = ({
   useEffect(() => {
     if (!diceRef.current) {
       const box = new DiceBox(`#${containerId}`, {
-        theme: "default",
+        theme: "smooth-pip",
         scale: 6,
       });
       box.init().then(() => {
@@ -55,7 +55,7 @@ export const DiceProvider = ({
     }
   }, [containerId]);
 
-  const roll = async (notation = "2d6") => {
+  const roll = async (notation = "2dpip") => {
     if (!diceRef.current) return [];
     return diceRef.current.roll(notation);
   };
