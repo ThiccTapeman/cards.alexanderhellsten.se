@@ -2,6 +2,7 @@ declare module "@3d-dice/dice-box" {
   export interface DiceBoxOptions {
     assetPath?: string;
     theme?: string;
+    themeColor?: string;
     scale?: number;
     gravity?: number;
     mass?: number;
@@ -14,8 +15,10 @@ declare module "@3d-dice/dice-box" {
   }
 
   export interface RollResult {
-    rolls: { sides: number | string; value: number }[];
-    total: number;
+    type: string; // e.g. "d6"
+    result: number; // total or single die value
+    rolls: number[]; // individual roll values
+    notation: string; // e.g. "2d6"
   }
 
   export default class DiceBox {

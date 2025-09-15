@@ -46,7 +46,9 @@ export function OverlayProvider({ children }: { children: ReactNode }) {
 
   return (
     <OverlayContext.Provider value={{ ui, open, close }}>
-      <div className="fixed top-0 left-0 w-screen h-screen">{children}</div>
+      <div className="fixed top-0 left-0 w-screen h-screen pointer-events-none">
+        {children}
+      </div>
     </OverlayContext.Provider>
   );
 }

@@ -28,7 +28,7 @@ export class Deck {
       }
     }
 
-    Game.RequestUpdate(UpdateType.Deck);
+    Game.RequestUpdate("deck");
   }
 
   /**
@@ -49,7 +49,7 @@ export class Deck {
       card.stack -= amount;
     }
 
-    Game.RequestUpdate(UpdateType.Deck);
+    Game.RequestUpdate("deck");
   }
 
   /**
@@ -61,6 +61,8 @@ export class Deck {
     for (let i = 0; i < amount; i++) {
       this.choices.push();
     }
+
+    Game.RequestUpdate("choices");
   }
 }
 

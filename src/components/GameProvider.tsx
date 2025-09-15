@@ -9,9 +9,9 @@ import React, {
 import { UpdateType, Game } from "./classes/Game";
 
 type GameUpdateContextType = {
-  requestUpdate: (u: UpdateType) => void;
+  requestUpdate: (u: string) => void;
   tick: number;
-  lastUpdateType: UpdateType | null;
+  lastUpdateType: string | null;
 };
 
 type GameContextType = {
@@ -23,10 +23,10 @@ const GameContext = createContext<GameContextType | null>(null);
 
 export function GameProvider({ children }: { children: ReactNode }) {
   const [tick, setTick] = useState(0);
-  const lastUpdateType = useRef<UpdateType | null>(null);
+  const lastUpdateType = useRef<string | null>(null);
   const [game, setGame] = useState<Game | null>(null);
 
-  function requestUpdate(u: UpdateType) {
+  function requestUpdate(u: string) {
     lastUpdateType.current = u;
     setTick((t) => t + 1);
   }
@@ -49,12 +49,12 @@ export function GameProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useGameUpdate(type: UpdateType) {
+export function useGameUpdate(type: string) {
   const ctx = useContext(GameUpdateContext);
   if (!ctx) throw new Error("Must be inside GameProvider");
 
   const shouldUpdate =
-    ctx.lastUpdateType === type || ctx.lastUpdateType === UpdateType.All;
+    ctx.lastUpdateType === type || ctx.lastUpdateType === "all";
 
   return { shouldUpdate, tick: ctx.tick };
 }

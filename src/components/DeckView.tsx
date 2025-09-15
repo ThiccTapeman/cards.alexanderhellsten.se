@@ -6,7 +6,7 @@ import { Deck } from "./classes/deck/Deck";
 import { CardView } from "./CardView";
 
 export function DeckView() {
-  const { shouldUpdate, tick } = useGameUpdate(UpdateType.Deck);
+  const { shouldUpdate, tick } = useGameUpdate("deck");
   const game = useGame();
 
   if (!game) return;

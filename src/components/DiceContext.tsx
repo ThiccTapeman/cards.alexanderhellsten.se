@@ -1,11 +1,9 @@
 // DiceContext.tsx
 import React, { createContext, useContext, useRef, useEffect } from "react";
-import DiceBox from "@3d-dice/dice-box";
-
-import type { RollResult } from "@3d-dice/dice-box";
+import DiceBox, { RollResult } from "@3d-dice/dice-box";
 
 type DiceContextType = {
-  roll: (notation?: string) => Promise<RollResult | any[]>;
+  roll: (qty: number, sides: number | string) => Promise<RollResult[]>;
 };
 
 const DiceContext = createContext<DiceContextType | null>(null);
@@ -16,7 +14,6 @@ export const useDice = () => {
   return ctx;
 };
 
-// DiceContext.tsx
 type ProviderProps = {
   children: React.ReactNode;
   containerId?: string;
@@ -36,28 +33,29 @@ export const DiceProvider = ({
     if (!diceRef.current) {
       const box = new DiceBox(`#${containerId}`, {
         theme: "smooth-pip",
+        themeColor: "#ffffff",
         scale: 6,
       });
+
       box.init().then(() => {
         diceRef.current = box;
 
         if (onDieComplete) {
-          box.onDieComplete = (die) => {
-            onDieComplete(die);
-          };
+          box.onDieComplete = onDieComplete;
         }
         if (onRollComplete) {
-          box.onRollComplete = (results) => {
-            onRollComplete(results);
-          };
+          box.onRollComplete = onRollComplete;
         }
       });
     }
-  }, [containerId]);
+  }, [containerId, onDieComplete, onRollComplete]);
 
-  const roll = async (notation = "2dpip") => {
+  const roll = async (qty: number, sides: number | string) => {
     if (!diceRef.current) return [];
-    return diceRef.current.roll(notation);
+    const notation = `${qty}d${sides}`;
+    const result = diceRef.current.roll(notation);
+    console.log(result);
+    return result;
   };
 
   return (

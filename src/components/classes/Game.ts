@@ -3,7 +3,7 @@ import { Deck } from "./deck/Deck";
 
 export class Game {
   deck: Deck;
-  static requestUpdateHandler: ((type: UpdateType) => void) | null = null;
+  static requestUpdateHandler: ((type: string) => void) | null = null;
 
   constructor() {
     this.deck = new Deck();
@@ -11,7 +11,7 @@ export class Game {
     this.deck.AddCard("Auto Hands", 1);
   }
 
-  static RequestUpdate(type: UpdateType) {
+  static RequestUpdate(type: string) {
     if (this.requestUpdateHandler) {
       this.requestUpdateHandler(type);
     }
