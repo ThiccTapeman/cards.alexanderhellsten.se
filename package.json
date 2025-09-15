@@ -1,0 +1,28 @@
+{
+  "name": "cards.alexanderhellsten.se",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@3d-dice/dice-box": "^1.1.4",
+    "@3d-dice/theme-smooth": "^0.2.1",
+    "@3d-dice/theme-smooth-pip": "^0.2.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.544.0",
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "tailwindcss": "^4"
+  }
+}

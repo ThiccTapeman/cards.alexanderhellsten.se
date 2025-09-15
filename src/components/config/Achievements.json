@@ -1,0 +1,109 @@
+{
+  "achievements": [
+    {
+      "category": "Cards",
+      "content": [
+        {
+          "title": "Cards?",
+          "description": "Have atleast 1 card in your deck",
+          "type": "Cards",
+          "method": ">=",
+          "goal": 1,
+          "rewardType": "Card",
+          "rewardDescription": "Gives a 2% boost of card rarity",
+          "reward": 0.02
+        },
+        {
+          "title": "10 of them",
+          "description": "Have atleast 10 cards in your deck",
+          "type": "Cards",
+          "method": ">=",
+          "goal": 10,
+          "rewardType": "Card",
+          "rewardDescription": "Gives a 2% boost of card rarity",
+          "reward": 0.02
+        },
+        {
+          "title": "25..",
+          "description": "Have atleast 25 cards in your deck",
+          "type": "Cards",
+          "method": ">=",
+          "goal": 25,
+          "rewardType": "Card",
+          "rewardDescription": "Gives a 2% boost of card rarity",
+          "reward": 0.02
+        },
+        {
+          "title": "50....",
+          "description": "Have atleast 50 cards in your deck",
+          "type": "Cards",
+          "method": ">=",
+          "goal": 50,
+          "rewardType": "Card",
+          "rewardDescription": "Gives a 2% boost of card rarity",
+          "reward": 0.02
+        }
+      ]
+    },
+    {
+      "category": "Cash",
+      "content": [
+        {
+          "title": "10 thousand.",
+          "description": "Have earned a total of 10 thousand",
+          "type": "Cash",
+          "method": ">=",
+          "goal": 10000,
+          "rewardType": "Animation",
+          "rewardDescription": "0.2s shorter animation speed",
+          "reward": 0.2
+        },
+        {
+          "title": "Millionare",
+          "description": "Have earned a total of a million",
+          "type": "Cash",
+          "method": ">=",
+          "goal": 1000000,
+          "rewardType": "Animation",
+          "rewardDescription": "0.2s shorter animation speed",
+          "reward": 0.2
+        },
+        {
+          "title": "Billionare",
+          "description": "Have earned a total of a billion",
+          "type": "Cash",
+          "method": ">=",
+          "goal": 1000000000,
+          "rewardType": "Animation",
+          "rewardDescription": "0.2s shorter animation speed",
+          "reward": 0.2
+        },
+        {
+          "title": "Trillionare",
+          "description": "Have earned a total of a trillion",
+          "type": "Cash",
+          "method": ">=",
+          "goal": 1000000000000,
+          "rewardType": "Animation",
+          "rewardDescription": "0.2s shorter animation speed",
+          "reward": 0.2
+        }
+      ]
+    },
+    {
+      "category": "Playtime",
+      "content": [
+        {
+          "title": "1 minute",
+          "description": "Have played atleast 1 minute",
+          "type": "Time",
+          "method": ">=",
+          "goal": 60,
+          "rewardType": "Cash",
+          "rewardDescription": "Gives a 0.2x multiplier",
+          "reward": 0.2
+        }
+      ]
+    }
+  ]
+}

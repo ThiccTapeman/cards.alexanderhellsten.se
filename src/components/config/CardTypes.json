@@ -1,0 +1,13 @@
+{
+  "cardTypes": [
+    {
+      "title": "Roll"
+    },
+    {
+      "title": "Speed"
+    },
+    {
+      "title": "Dices"
+    }
+  ]
+}
