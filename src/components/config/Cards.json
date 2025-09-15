@@ -8,8 +8,14 @@
       "type": "Roll",
       "value": 2,
       "multiplier": 1.5,
-      "weaknesses": ["Extra Dice"],
-      "weaknessMultiplier": [0.8],
+      "weaknesses": [
+        {
+          "title": "Extra Dice",
+          "description": "dwa",
+          "multiplier": 0.8,
+          "chance": 0.8
+        }
+      ],
       "abilities": [
         {
           "title": "Double Chance",
@@ -29,8 +35,14 @@
       "type": "Auto",
       "value": 1,
       "multiplier": 1.3,
-      "weaknesses": ["Lucky Toss"],
-      "weaknessMultiplier": [0.6],
+      "weaknesses": [
+        {
+          "title": "Lucky Toss",
+          "description": "Weak against Lucky Toss.",
+          "multiplier": 0.6,
+          "chance": 1
+        }
+      ],
       "abilities": [
         {
           "title": "Quick Start",
@@ -50,8 +62,14 @@
       "type": "Dices",
       "value": 1,
       "multiplier": 1,
-      "weaknesses": ["Auto Hands"],
-      "weaknessMultiplier": [0.5],
+      "weaknesses": [
+        {
+          "title": "Auto Hands",
+          "description": "Weak against Auto Hands.",
+          "multiplier": 0.5,
+          "chance": 1
+        }
+      ],
       "abilities": [
         {
           "title": "Stacked Roll",
@@ -71,8 +89,14 @@
       "type": "Roll",
       "value": 4,
       "multiplier": 2,
-      "weaknesses": ["Extra Dice"],
-      "weaknessMultiplier": [0.8],
+      "weaknesses": [
+        {
+          "title": "Extra Dice",
+          "description": "Weak against Extra Dice.",
+          "multiplier": 0.8,
+          "chance": 1
+        }
+      ],
       "abilities": [
         {
           "title": "Double up",
@@ -100,8 +124,14 @@
       "type": "Auto",
       "value": 3,
       "multiplier": 1,
-      "weaknesses": ["Roll"],
-      "weaknessMultiplier": [0.8],
+      "weaknesses": [
+        {
+          "title": "Roll",
+          "description": "Weak against Roll cards.",
+          "multiplier": 0.8,
+          "chance": 1
+        }
+      ],
       "abilities": [
         {
           "title": "Reverse Flow",

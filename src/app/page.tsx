@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import GameView from "@/components/GameView";
+import React, { useMemo, useState } from "react";
+import GameView from "../components/GameView";
 
 export default function Home() {
   return (

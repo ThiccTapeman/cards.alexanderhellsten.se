@@ -1,13 +1,13 @@
 {
-  "cardTypes": [
+  "types": [
     {
       "title": "Roll"
     },
     {
-      "title": "Speed"
+      "title": "Dices"
     },
     {
-      "title": "Dices"
+      "title": "Auto"
     }
   ]
 }

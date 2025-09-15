@@ -1,5 +1,5 @@
 {
-  "cardRarities": [
+  "rarities": [
     {
       "title": "Common",
       "chance": 0.5,
