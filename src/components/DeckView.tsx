@@ -17,7 +17,10 @@ export function DeckView() {
       <div className="grid grid-cols-3 gap-5">
         {game.deck &&
           game.deck.cards.map((c) => (
-            <CardView card={c.base} key={`${c.data?.title}_VIEW`}></CardView>
+            <CardView
+              card={c.base}
+              key={`${c.data?.title}_VIEW`}
+              stack={c.stack}></CardView>
           ))}
       </div>
 

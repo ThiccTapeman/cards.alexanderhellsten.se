@@ -59,6 +59,6 @@ export function useOverlay(name: string, showAlways: boolean = false) {
   return {
     isActive: ctx.ui.includes(name) || showAlways,
     open: (n: string) => ctx.open(n),
-    close: () => ctx.close(name),
+    close: (n?: string) => ctx.close(n || name),
   };
 }

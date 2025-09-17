@@ -1,6 +1,6 @@
 const TypeJSON = require("../../config/Types.json");
 
-export class Type {
+export class CardType {
   title: string;
 
   constructor(title: string) {
@@ -8,10 +8,12 @@ export class Type {
   }
 }
 
-export class TypeHandler {
-  static types: Type[] = TypeJSON.types.map((r: any) => new Type(r.title));
+export class CardTypeHandler {
+  static types: CardType[] = TypeJSON.types.map(
+    (r: any) => new CardType(r.title)
+  );
 
-  static Get(title: string): Type | undefined {
+  static Get(title: string): CardType | undefined {
     return this.types.find((r) => r.title === title);
   }
 }

@@ -1,7 +1,7 @@
 import { Ability } from "./card/Ability";
 import { Card, CardData } from "./card/Card";
 import { RarityHandler } from "./card/Rarity";
-import { TypeHandler } from "./card/Type";
+import { CardTypeHandler } from "./card/Type";
 import { Weakness } from "./card/Weakness";
 import { ErrorHandler, ErrorType } from "./ErrorHandler";
 const CardJSON = require("../config/Cards.json");
@@ -40,7 +40,7 @@ export class CardIndex {
    */
   private static GetCardData(card: any): CardData | null {
     const cardRarity = RarityHandler.Get(card.rarity);
-    const cardType = TypeHandler.Get(card.type);
+    const cardType = CardTypeHandler.Get(card.type);
 
     if (!cardRarity || !cardType) return null;
 

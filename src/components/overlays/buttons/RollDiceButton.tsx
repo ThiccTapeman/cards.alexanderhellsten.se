@@ -19,9 +19,12 @@ export function RollDiceButton() {
       rolls = [],
       notation = "",
     } = results[0] ?? {};
+    console.log(type, result, rolls, notation);
   }
 
-  function onRollComplete(result: RollResult) {}
+  function onRollComplete(result: RollResult) {
+    console.log(result);
+  }
 
   return (
     <button onClick={handleRoll}>

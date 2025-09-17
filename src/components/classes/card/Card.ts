@@ -3,7 +3,8 @@ import { Ability } from "./Ability";
 import { Weakness } from "./Weakness";
 
 import { Rarity, RarityHandler } from "./Rarity";
-import { Type, TypeHandler } from "./Type";
+import { CardType, CardTypeHandler } from "./Type";
+import { Dice } from "../dice/dice";
 
 const CardJSON = require("../../config/Cards.json");
 
@@ -12,7 +13,7 @@ export type CardData = {
   description: string;
   image: string;
   rarity: Rarity;
-  type: Type;
+  type: CardType;
   multiplier: number;
   weaknesses: [Weakness];
   abilities: [Ability];
@@ -24,7 +25,6 @@ export class Card {
   /**
    * Creates and loads a card with the title.
    * @param title The card that will be loaded onto the class.
-   * @param stack The starting stack that will be applied to the card.
    */
   constructor(data: CardData) {
     this.data = data;

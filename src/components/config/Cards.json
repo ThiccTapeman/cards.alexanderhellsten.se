@@ -11,7 +11,9 @@
       "weaknesses": [
         {
           "title": "Extra Dice",
-          "description": "dwa",
+          "description": "Weak against Extra Dice.",
+          "type": "Card",
+          "requirement": "Extra Dice",
           "multiplier": 0.8,
           "chance": 0.8
         }
@@ -21,7 +23,8 @@
           "title": "Double Chance",
           "description": "20% chance to double your roll result.",
           "requirement": 1,
-          "diceRequirement": 0,
+          "requirementType": "Card",
+          "abilityRequirement": 0,
           "multiplier": 2,
           "chance": 0.2
         }
@@ -40,6 +43,8 @@
           "title": "Lucky Toss",
           "description": "Weak against Lucky Toss.",
           "multiplier": 0.6,
+          "type": "Card",
+          "requirement": "Lucky Toss",
           "chance": 1
         }
       ],
@@ -48,7 +53,8 @@
           "title": "Quick Start",
           "description": "Gain 10% faster auto roll.",
           "requirement": 2,
-          "diceRequirement": 0,
+          "requirementType": "Card",
+          "abilityRequirement": "Jackpot",
           "multiplier": 1.1,
           "chance": 0.4
         }
@@ -66,6 +72,8 @@
         {
           "title": "Auto Hands",
           "description": "Weak against Auto Hands.",
+          "type": "Card",
+          "requirement": "Auto Hands",
           "multiplier": 0.5,
           "chance": 1
         }
@@ -75,7 +83,8 @@
           "title": "Stacked Roll",
           "description": "10% chance to add another bonus dice this round.",
           "requirement": 2,
-          "diceRequirement": 0,
+          "requirementType": "Null",
+          "abilityRequirement": "Jackpot",
           "multiplier": 1,
           "chance": 0.1
         }
@@ -93,6 +102,8 @@
         {
           "title": "Extra Dice",
           "description": "Weak against Extra Dice.",
+          "type": "Card",
+          "requirement": "Extra Dice",
           "multiplier": 0.8,
           "chance": 1
         }
@@ -102,7 +113,8 @@
           "title": "Double up",
           "description": "35% chance to double your roll if you roll a 2.",
           "requirement": 1,
-          "diceRequirement": 2,
+          "requirementType": "Dice",
+          "abilityRequirement": 2,
           "multiplier": 2,
           "chance": 0.35
         },
@@ -110,9 +122,57 @@
           "title": "Jackpot",
           "description": "15% chance to triple your roll if you roll a 6.",
           "requirement": 3,
-          "diceRequirement": 6,
+          "requirementType": "Dice",
+          "abilityRequirement": 6,
           "multiplier": 3,
           "chance": 0.15
+        }
+      ]
+    },
+    {
+      "title": "Gambler",
+      "description": "High risk. High reward",
+      "image": "high_roller.png",
+      "rarity": "Legendary",
+      "type": "Roll",
+      "value": 4,
+      "multiplier": 2,
+      "weaknesses": [
+        {
+          "title": "2s",
+          "description": "80% chance to add a 0 multiplier when a 2 is rolled.",
+          "type": "Dice",
+          "requirement": 2,
+          "multiplier": 0.0,
+          "chance": 0.8
+        },
+        {
+          "title": "3s",
+          "description": "80% chance to add a 0 multiplier when a 3 is rolled.",
+          "type": "Dice",
+          "requirement": 2,
+          "multiplier": 0.0,
+          "chance": 0.8
+        }
+      ],
+      "abilities": [
+        {
+          "title": "Double up",
+          "description": "50% chance to triple your roll if you roll a 2.",
+          "requirement": 1,
+          "requirementType": "Dice",
+          "abilityRequirement": 2,
+          "multiplier": 3,
+          "chance": 0.5
+        },
+        {
+          "title": "Jackpot",
+          "description": "50% chance to quadruple your roll if you roll a 6.",
+          "requirement": 3,
+          "requirementType": "Dice",
+          "abilityRequirement": 6,
+          "multiplier": 4,
+          "chance": 0.5
         }
       ]
     },
@@ -128,6 +188,8 @@
         {
           "title": "Roll",
           "description": "Weak against Roll cards.",
+          "type": "Category",
+          "requirement": "Lucky Toss",
           "multiplier": 0.8,
           "chance": 1
         }
@@ -137,7 +199,8 @@
           "title": "Reverse Flow",
           "description": "10% chance to cut the auto roll speed in half.",
           "requirement": 4,
-          "diceRequirement": 5,
+          "requirementType": "Null",
+          "abilityRequirement": "Jackpot",
           "multiplier": 2,
           "chance": 0.1
         }
