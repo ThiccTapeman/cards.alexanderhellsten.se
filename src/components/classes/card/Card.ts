@@ -4,9 +4,7 @@ import { Weakness } from "./Weakness";
 
 import { Rarity, RarityHandler } from "./Rarity";
 import { CardType, CardTypeHandler } from "./Type";
-import { Dice } from "../dice/dice";
-
-const CardJSON = require("../../config/Cards.json");
+import { Upgrade } from "./Upgrade";
 
 export type CardData = {
   title: string;
@@ -15,6 +13,7 @@ export type CardData = {
   rarity: Rarity;
   type: CardType;
   multiplier: number;
+  upgrades: [Upgrade, Upgrade];
   weaknesses: [Weakness];
   abilities: [Ability];
 };

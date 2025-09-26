@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { AbilityView } from "./AbilityView";
-import { Card } from "./classes/card/Card";
+import { Card } from "../classes/card/Card";
 import { WeaknessView } from "./WeaknessView";
 
 type CardViewProps = {

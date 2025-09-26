@@ -1,0 +1,73 @@
+[
+  {
+    "id": "lucky_toss",
+    "title": "Lucky Toss",
+    "description": "Boosts your dice roll strength.",
+    "image": "lucky_toss.png",
+    "rarity": "Common",
+    "type": "Roll",
+    "value": 2,
+    "multiplier": 1.5,
+    "weaknesses": ["weak_extra_dice"],
+    "abilities": ["double_chance"],
+    "upgrades": [
+      ["chance_boost_i", "roll_power_i"],
+      ["chance_boost_ii", "roll_power_ii"]
+    ]
+  },
+  {
+    "id": "auto_hands",
+    "title": "Auto Hands",
+    "description": "Rolls dice automatically your round flow.",
+    "image": "auto_hands.png",
+    "rarity": "Uncommon",
+    "type": "Auto",
+    "value": 1,
+    "multiplier": 1.3,
+    "weaknesses": ["weak_lucky_toss"],
+    "abilities": ["quick_start"],
+    "upgrades": [
+      ["auto_speed_i", "auto_power_i"],
+      ["auto_speed_ii", "auto_power_ii"]
+    ]
+  },
+  {
+    "id": "extra_dice",
+    "title": "Extra Dice",
+    "description": "Adds an extra dice to your roll.",
+    "image": "extra_dice.png",
+    "rarity": "Rare",
+    "type": "Dices",
+    "value": 1,
+    "multiplier": 1,
+    "weaknesses": ["weak_auto_hands"],
+    "abilities": ["double_chance"],
+    "upgrades": [["bonus_dice_i"], ["bonus_dice_ii"]]
+  },
+  {
+    "id": "high_roller",
+    "title": "High Roller",
+    "description": "Favors big dice rolls.",
+    "image": "high_roller.png",
+    "rarity": "Epic",
+    "type": "Roll",
+    "value": 4,
+    "multiplier": 2,
+    "weaknesses": ["weak_extra_dice"],
+    "abilities": ["double_up", "jackpot"],
+    "upgrades": [["double_up_plus_i"], ["double_up_plus_ii"]]
+  },
+  {
+    "id": "gambler",
+    "title": "Gambler",
+    "description": "High risk. High reward",
+    "image": "high_roller.png",
+    "rarity": "Legendary",
+    "type": "Roll",
+    "value": 4,
+    "multiplier": 2,
+    "weaknesses": [],
+    "abilities": ["jackpot", "double_up_plus"],
+    "upgrades": [["jackpot_plus_i"], ["jackpot_plus_ii"]]
+  }
+]

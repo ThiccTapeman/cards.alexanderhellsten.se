@@ -1,0 +1,29 @@
+[
+  {
+    "id": "weak_extra_dice",
+    "title": "Extra Dice",
+    "description": "Weak against Extra Dice.",
+    "type": "Card",
+    "requirement": "Extra Dice",
+    "multiplier": 0.7,
+    "chance": 1
+  },
+  {
+    "id": "weak_lucky_toss",
+    "title": "Lucky Toss",
+    "description": "Weak against Lucky Toss.",
+    "multiplier": 0.7,
+    "type": "Card",
+    "requirement": "Lucky Toss",
+    "chance": 1
+  },
+  {
+    "id": "weak_auto_hands",
+    "title": "Auto Hands",
+    "description": "Weak against Auto Hands.",
+    "type": "Card",
+    "requirement": "Auto Hands",
+    "multiplier": 0.7,
+    "chance": 1
+  }
+]

@@ -15,10 +15,13 @@ declare module "@3d-dice/dice-box" {
   }
 
   export interface RollResult {
-    type: string; // e.g. "d6"
-    result: number; // total or single die value
-    rolls: number[]; // individual roll values
-    notation: string; // e.g. "2d6"
+    sides: string; // "pip"
+    dieType: string; // "pip"
+    groupId: number; // group identifier
+    rollId: number; // roll identifier
+    theme: string; // theme name
+    themeColor: string; // hex color
+    value: number; // rolled value
   }
 
   export default class DiceBox {

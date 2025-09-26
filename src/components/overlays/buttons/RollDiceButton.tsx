@@ -4,26 +4,26 @@ import { Plane, Play } from "lucide-react";
 import { Game } from "../../classes/Game";
 import { useGame } from "../../GameProvider";
 import { RollResult } from "@3d-dice/dice-box";
+import { Dice } from "../../classes/dice/Dice";
+import { ErrorHandler, ErrorType } from "../../classes/ErrorHandler";
 
 export function RollDiceButton() {
   const { roll } = useDice();
   const game = useGame();
 
   async function handleRoll() {
+    const dice = Dice.instance;
+    if (!dice.CanRoll()) return;
+
+    dice.SetCanRoll(false);
     const results = await roll(2, "pip"); // qty, sides
-    if (!results.length) return;
 
-    const {
-      type = "",
-      result = 0,
-      rolls = [],
-      notation = "",
-    } = results[0] ?? {};
-    console.log(type, result, rolls, notation);
-  }
+    const values = results.map((r) => r.value);
+    const total = results.reduce((sum, r) => sum + r.value, 0);
 
-  function onRollComplete(result: RollResult) {
-    console.log(result);
+    dice.Set(values, total);
+
+    dice.onRollCompleted.Call();
   }
 
   return (

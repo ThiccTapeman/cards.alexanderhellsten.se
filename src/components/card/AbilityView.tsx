@@ -1,4 +1,4 @@
-import { Ability } from "./classes/card/Ability";
+import { Ability } from "../classes/card/Ability";
 
 type AbilityViewProps = {
   ability?: Ability;

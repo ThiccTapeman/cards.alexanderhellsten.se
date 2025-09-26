@@ -1,4 +1,4 @@
-import { Weakness } from "./classes/card/Weakness";
+import { Weakness } from "../classes/card/Weakness";
 
 type WeaknessViewProps = {
   weakness?: Weakness;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CardView } from "../CardView";
+import { CardView } from "../card/CardView";
 import { useGame, useGameUpdate } from "../GameProvider";
 import { useOverlay } from "../OverlayProvider";
 import { CloseButton } from "./buttons/CloseButton";

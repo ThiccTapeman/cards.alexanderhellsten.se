@@ -3,7 +3,7 @@ import React from "react";
 import { useGame, useGameUpdate } from "./GameProvider";
 import { UpdateType } from "./classes/Game";
 import { Deck } from "./classes/deck/Deck";
-import { CardView } from "./CardView";
+import { CardView } from "./card/CardView";
 
 export function DeckView() {
   const { shouldUpdate, tick } = useGameUpdate("deck");

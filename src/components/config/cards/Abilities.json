@@ -1,0 +1,68 @@
+[
+  {
+    "id": "double_chance",
+    "title": "Double Chance",
+    "description": "20% chance to double your roll result.",
+    "stackRequirement": 1,
+    "requirementType": "Card",
+    "requirement": 0,
+    "type": "Roll",
+    "multiplier": 2,
+    "chance": 0.2
+  },
+  {
+    "id": "quick_start",
+    "title": "Quick Start",
+    "description": "Gain 10% faster auto rolls.",
+    "stackRequirement": 2,
+    "requirementType": "Card",
+    "requirement": "Jackpot",
+    "type": "Roll",
+    "multiplier": 1.1,
+    "chance": 0.4
+  },
+  {
+    "id": "stacked_roll",
+    "title": "Stacked Roll",
+    "description": "10% chance to add another bonus dice this round.",
+    "stackRequirement": 2,
+    "requirementType": "Card",
+    "requirement": "Jackpot",
+    "type": "Dice",
+    "multiplier": 1,
+    "chance": 0.1
+  },
+  {
+    "id": "double_up",
+    "title": "Double up",
+    "description": "35% chance to double your roll if you roll a 2.",
+    "stackRequirement": 1,
+    "requirementType": "Dice",
+    "requirement": 2,
+    "type": "Roll",
+    "multiplier": 2,
+    "chance": 0.35
+  },
+  {
+    "id": "jackpot",
+    "title": "Jackpot",
+    "description": "15% chance to triple your roll if you roll a 6.",
+    "stackRequirement": 3,
+    "requirementType": "Dice",
+    "requirement": 6,
+    "type": "Roll",
+    "multiplier": 3,
+    "chance": 0.15
+  },
+  {
+    "id": "double_up_plus",
+    "title": "Double up+",
+    "description": "50% chance to triple your roll if you roll a 2.",
+    "stackRequirement": 1,
+    "requirementType": "Dice",
+    "requirement": 2,
+    "type": "Roll",
+    "multiplier": 3,
+    "chance": 0.5
+  }
+]

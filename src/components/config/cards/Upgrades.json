@@ -1,0 +1,194 @@
+[
+  {
+    "id": "chance_boost_i",
+    "title": "Chance Boost I",
+    "type": "Chance",
+    "modifier": null,
+    "value": 1.2
+  },
+  {
+    "id": "chance_boost_ii",
+    "title": "Chance Boost II",
+    "type": "Chance",
+    "modifier": null,
+    "value": 1.4
+  },
+
+  {
+    "id": "roll_power_i",
+    "title": "Roll Power I",
+    "type": "Value",
+    "value": 3
+  },
+  {
+    "id": "roll_power_ii",
+    "title": "Roll Power II",
+    "type": "Value",
+    "value": 4
+  },
+
+  {
+    "id": "auto_speed_i",
+    "title": "Auto Speed I",
+    "type": "Multiplier",
+    "value": 1.4
+  },
+  {
+    "id": "auto_speed_ii",
+    "title": "Auto Speed II",
+    "type": "Multiplier",
+    "value": 1.5
+  },
+
+  {
+    "id": "auto_power_i",
+    "title": "Auto Power I",
+    "type": "Value",
+    "value": 2
+  },
+  {
+    "id": "auto_power_ii",
+    "title": "Auto Power II",
+    "type": "Value",
+    "value": 2
+  },
+
+  {
+    "id": "bonus_dice_i",
+    "title": "Bonus Dice I",
+    "type": "Value",
+    "value": 2
+  },
+  {
+    "id": "bonus_dice_ii",
+    "title": "Bonus Dice II",
+    "type": "Value",
+    "value": 3
+  },
+
+  {
+    "id": "multiplier_buff_i",
+    "title": "Multiplier Buff I",
+    "type": "Multiplier",
+    "value": 1.2
+  },
+  {
+    "id": "multiplier_buff_ii",
+    "title": "Multiplier Buff II",
+    "type": "Multiplier",
+    "value": 1.4
+  },
+
+  {
+    "id": "roll_boost_i",
+    "title": "Roll Boost I",
+    "type": "Value",
+    "value": 5
+  },
+  {
+    "id": "double_up_plus_i",
+    "title": "Double Up+",
+    "type": "Chance",
+    "modifier": "double_up",
+    "value": 0.45
+  },
+  {
+    "id": "multiplier_buff_i",
+    "title": "Multiplier Buff I",
+    "type": "Multiplier",
+    "value": 2.3
+  },
+  {
+    "id": "jackpot_plus_i",
+    "title": "Jackpot+",
+    "type": "Chance",
+    "modifier": "jackpot",
+    "value": 0.2
+  },
+  {
+    "id": "roll_boost_ii",
+    "title": "Roll Boost II",
+    "type": "Value",
+    "value": 6
+  },
+  {
+    "id": "jackpot_plus_ii",
+    "title": "Jackpot++",
+    "type": "Multiplier",
+    "value": 3.5
+  },
+
+  {
+    "id": "risk_balance_i",
+    "title": "Risk Balance I",
+    "type": "Weakness Mitigation",
+    "value": 0.7
+  },
+  {
+    "id": "double_up_plus_ii",
+    "title": "Double Up+",
+    "type": "Chance",
+    "value": 0.6
+  },
+  {
+    "id": "multiplier_buff_g_i",
+    "title": "Multiplier Buff I",
+    "type": "Multiplier",
+    "value": 2.5
+  },
+  {
+    "id": "jackpot_plus_g",
+    "title": "Jackpot+",
+    "type": "Multiplier",
+    "value": 5
+  },
+  {
+    "id": "risk_balance_ii",
+    "title": "Risk Balance II",
+    "type": "Weakness Mitigation",
+    "value": 0.6
+  },
+  {
+    "id": "double_up_pp",
+    "title": "Double Up++",
+    "type": "Chance",
+    "value": 0.7
+  },
+
+  {
+    "id": "auto_surge_i",
+    "title": "Auto Surge I",
+    "type": "Value",
+    "value": 4
+  },
+  {
+    "id": "reverse_flow_plus",
+    "title": "Reverse Flow+",
+    "type": "Chance",
+    "value": 0.15
+  },
+  {
+    "id": "auto_surge_ii",
+    "title": "Auto Surge II",
+    "type": "Value",
+    "value": 5
+  },
+  {
+    "id": "speed_multiplier_i",
+    "title": "Speed Multiplier I",
+    "type": "Multiplier",
+    "value": 1.2
+  },
+  {
+    "id": "reverse_flow_pp",
+    "title": "Reverse Flow++",
+    "type": "Multiplier",
+    "value": 2.5
+  },
+  {
+    "id": "chance_buff",
+    "title": "Chance Buff",
+    "type": "Chance",
+    "value": 0.2
+  }
+]

@@ -4,6 +4,7 @@ import { CardType, CardTypeHandler } from "../card/Type";
 import { Weakness, WeaknessType } from "../card/Weakness";
 import { CardIndex } from "../CardIndex";
 import { Dice } from "../dice/Dice";
+import { Action } from "../Action";
 import { ErrorHandler, ErrorType } from "../ErrorHandler";
 import { Game, UpdateType } from "../Game";
 import { DeckData } from "./DeckData";
@@ -12,6 +13,10 @@ export class Deck {
   cards: DeckCard[] = [];
   choices: Card[] = [];
   timesChosen: number = 0;
+
+  onDeckLoaded: Action = new Action();
+  onCardAdded: Action = new Action();
+  onCardRemoved: Action = new Action();
 
   constructor(data: DeckData | undefined = undefined) {
     // You can initialize deck from data if needed
@@ -34,6 +39,7 @@ export class Deck {
       }
     }
 
+    this.onCardAdded.Call();
     Game.RequestUpdate("deck");
   }
 
@@ -55,6 +61,7 @@ export class Deck {
       card.stack -= amount;
     }
 
+    this.onCardRemoved.Call();
     Game.RequestUpdate("deck");
   }
 

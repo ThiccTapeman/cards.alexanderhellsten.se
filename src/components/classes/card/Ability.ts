@@ -1,5 +1,4 @@
 import { ErrorHandler, ErrorType } from "../ErrorHandler";
-import { Card } from "./Card";
 
 export enum AbilityType {
   Null = "Null",
@@ -9,42 +8,52 @@ export enum AbilityType {
 }
 
 export class Ability {
+  id: string = "";
   title: string = "";
   description: string = "";
-  requirement: number = 0;
+  stackRequirement: number = 0;
+  requirement: number | string = 0;
   requirementType: AbilityType | null = null;
   abilityRequirement: number | string | null = null;
   multiplier: number = 0;
   chance: number = 0;
+  type: string = "";
+
   constructor(data: any) {
     if (
-      typeof data.title != "string" ||
-      typeof data.description != "string" ||
-      typeof data.requirement != "number" ||
-      typeof data.requirementType != "string" ||
-      (typeof data.abilityRequirement != "number" &&
-        typeof data.abilityRequirement != "string") ||
-      typeof data.multiplier != "number" ||
-      typeof data.chance != "number"
+      typeof data.id !== "string" ||
+      typeof data.title !== "string" ||
+      typeof data.description !== "string" ||
+      typeof data.stackRequirement !== "number" ||
+      !(Object.values(AbilityType) as string[]).includes(
+        data.requirementType
+      ) ||
+      (typeof data.requirement !== "number" &&
+        typeof data.requirement !== "string") ||
+      typeof data.type !== "string" ||
+      typeof data.multiplier !== "number" ||
+      typeof data.chance !== "number"
     ) {
       throw new ErrorHandler(
-        "Weakness",
-        "Weakness in data was wrong.",
+        "Ability",
+        "Ability data was invalid: " + JSON.stringify(data),
         ErrorType.Value
       );
-      return;
     }
+
+    this.id = data.id;
     this.title = data.title;
     this.description = data.description;
+    this.stackRequirement = data.stackRequirement;
     this.requirement = data.requirement;
-    this.requirementType = data.requirementType;
-    this.abilityRequirement = data.abilityRequirement;
+    this.requirementType = data.requirementType as AbilityType;
+    this.abilityRequirement = data.abilityRequirement ?? null;
     this.multiplier = data.multiplier;
     this.chance = data.chance;
+    this.type = data.type;
   }
 
   IsLocked(stack: number) {
-    if (this.requirement > stack) return true;
-    return false;
+    return this.stackRequirement > stack;
   }
 }
